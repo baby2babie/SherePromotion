@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+
+</head>
+<body>
+
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "2004478373-G74no0Mk" })
+      await liff.shareTargetPicker([
+        {
+    "type": "flex",
+    "altText": "Flex Mes",
+    "contents": {
+      "type": "bubble",
+      "size": "kilo",
+      "body": {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://lh3.googleusercontent.com/d/1PfMqikMudJoFQ-1oBMeDrmu3-I_TrAWQ=w1000?authuser=0",
+            "aspectRatio": "6:10",
+            "aspectMode": "cover",
+            "size": "full"
+          },
+          {
+            "type": "image",
+            "url": "https://lh3.googleusercontent.com/d/1CJ4-iayifR-WI42OKCLaadT9CFXwAcKT=w1000?authuser=0",
+            "position": "absolute",
+            "offsetStart": "xs",
+            "offsetEnd": "xxl",
+            "offsetBottom": "xxl",
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "https://liff.line.me/2004478373-G74no0Mk"
+            }
+          }
+        ]
+      }
+    }
+  }
+      ])
+      
+    
+      liff.closeWindow()
+    }
+    
+    main()
+  </script>
+</body>
+</html>
